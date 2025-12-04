@@ -160,10 +160,13 @@
         <div class="text">${a.en}</div>
         <div class="label">Deutsch</div>
         <div class="text">${a.de}</div>
+        
         <div class="actions">
-          <button class="play" data-file="answer${n}.mp3" aria-label="Play Answer ${n}">▶ Play Answer ${n}</button>
-          answer${n}.mp3⬇ Download</a>
+          <button class="play" data-file="answer1.mp3" aria-label="Play Answer 1">▶ Play Answer 1</button>
+          <!-- This link points to a same-origin relative file and suggests a filename -->
+          answer1.mp3⬇ Download</a>
         </div>
+
       `;
       cardsEl.appendChild(card);
     });
@@ -184,3 +187,4 @@
   </script>
 </body>
 </html>
+
