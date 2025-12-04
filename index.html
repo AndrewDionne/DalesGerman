@@ -2,15 +2,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>German Audio Practice</title>
+  <meta charset="utf-8" />
+  <title>German Audio Practice – Answers 1–10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;        /* dark blue-gray */
+      --card: #111827;      /* dark card */
+      --accent: #10b981;    /* green */
+      --text: #e5e7eb;      /* light gray */
+      --muted: #9ca3af;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      text-align: center;
+      margin: 0 0 1rem;
+      font-size: 1.75rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .card h2 {
+      margin: 0 0 .5rem;
+      font-size: 1.1rem;
+    }
+    .label {
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+    .text {
+      margin: .25rem 0 .75rem;
+      line-height: 1.35;
+    }
+    .actions {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    button.play {
+      background: var(--accent);
+      color: #062e22;
+      border: none;
+      border-radius: 999px;
+      padding: .5rem .9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.play:active { transform: scale(0.98); }
+    a.download {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid #374151;
+      border-radius: 999px;
+      padding: .45rem .75rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    /* Make long lines scrollable on small screens */
+    .text { overflow-wrap: anywhere; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; text-align: center;">
-  <h1>German Audio Practice</h1>
-  <p>Tap play and listen while walking to school!</p>
-  <audio controls preload="none" style="width:100%">
-    <source src="german_answers_all.mp3" typeoes not support the audio element.
-  </audio>
+<body>
+  <div class="container">
+    <h1>German Audio Practice – Answers 1–10</h1>
+
+    <!-- One shared audio element (iOS-friendly). We switch its src via JS. -->
+    <audio id="player" preload="none" playsinline></audio>
+
+    <div id="cards" class="grid"></div>
+
+    <footer>
+      Tip: Tap Play, then lock the screen—audio keeps playing on iPhone.<br/>
+      Site: https://andrewdionne.github.io/DalesGerman/DalesGerman</a>
+    </footer>
+  </div>
+
+  <script>
+    // Data: answers EN + DE; files answer1.mp3 ... answer10.mp3 in the same folder
+    const answers = [
+      {
+        en: "I live in Warsaw. My city is beautiful and clean. You can watch football games and there are many hiking trails.",
+        de: "Ich wohne in Warschau. Meine Stadt ist schön und sauber. Man kann Fußballspiele anschauen und es gibt viele Wanderwege."
+      },
+      {
+        en: "In Warsaw, it is a bit foggy and rainy. When it’s hot, I go swimming. When it’s cold, I drink hot chocolate.",
+        de: "In Warschau ist es etwas neblig und regnerisch. Wenn es heiß ist, gehe ich schwimmen. Wenn es kalt ist, trinke ich heiße Schokolade."
+      },
+      {
+        en: "I went to Krakow with my family last fall by car, and we stayed in a hotel.",
+        de: "Ich bin letzten Herbst mit meiner Familie nach Krakau gefahren, mit dem Auto, und habe im Hotel gewohnt."
+      },
+      {
+        en: "I visited the Old Town, the weather was sunny, and the holidays were great.",
+        de: "Ich habe die Altstadt besucht, das Wetter war sonnig, und die Ferien waren großartig."
+      },
+      {
+        en: "I like action films, don’t like romantic movies, and my favorite is Top Gun because it’s exciting.",
+        de: "Ich mag Actionfilme, romantische Filme nicht so gern, und mein Lieblingsfilm ist Top Gun, weil er spannend ist."
+      },
+      {
+        en: "The last film I watched was a Christmas movie at home. It was bad, but next time I will watch Stranger Things.",
+        de: "Der letzte Film, den ich gesehen habe, war ein Weihnachtsfilm zu Hause. Er war schlecht, aber nächstes Mal sehe ich Stranger Things."
+      },
+      {
+        en: "My favorite actor is Tom Cruise because of Top Gun.",
+        de: "Mein Lieblingsschauspieler ist Tom Cruise wegen Top Gun."
+      },
+      {
+        en: "I watch TV on the weekends, I like Stranger Things, I don’t like romantic comedies, and I love Naruto.",
+        de: "Ich sehe am Wochenende fern, mag Stranger Things, mag keine romantischen Komödien und liebe Naruto."
+      },
+      {
+        en: "I like spy novels, I read in bed most nights, and my favorite book is Skyward by Brandon Sanderson.",
+        de: "Ich lese gern Spionageromane, lese meistens abends im Bett, und mein Lieblingsbuch ist Skyward von Brandon Sanderson."
+      },
+      {
+        en: "I sit about 7 hours per week in front of a screen, my parents think that’s fine, I’m not addicted, and I should probably spend more time outside.",
+        de: "Ich sitze etwa 7 Stunden pro Woche vor dem Bildschirm, meine Eltern finden das in Ordnung, ich bin nicht süchtig, und ich sollte wahrscheinlich mehr Zeit draußen verbringen."
+      }
+    ];
+
+    const cardsEl = document.getElementById("cards");
+    const player = document.getElementById("player");
+
+    answers.forEach((a, idx) => {
+      const n = idx + 1;
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h2>Answer ${n}</h2>
+        <div class="label">English</div>
+        <div class="text">${a.en}</div>
+        <div class="label">Deutsch</div>
+        <div class="text">${a.de}</div>
+        <div class="actions">
+          <button class="play" data-file="answer${n}.mp3" aria-label="Play Answer ${n}">▶ Play Answer ${n}</button>
+          answer${n}.mp3⬇ Download</a>
+        </div>
+      `;
+      cardsEl.appendChild(card);
+    });
+
+    // Wire up play buttons
+    cardsEl.addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button.play");
+      if (!btn) return;
+      const file = btn.getAttribute("data-file");
+
+      // Set source & play (user-initiated -> allowed on iOS)
+      player.src = file;
+      player.play().catch(err => {
+        alert("Unable to play audio. If you’re on iPhone, check Silent Mode and try again.");
+        console.error(err);
+      });
+    });
+  </script>
 </body>
 </html>
