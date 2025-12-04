@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --accent: #10b981;
-      --text: #e5e7eb;
+      --bg: #0f172a;        /* dark blue-gray */
+      --card: #111827;      /* dark card */
+      --accent: #10b981;    /* green */
+      --text: #e5e7eb;      /* light gray */
       --muted: #9ca3af;
+      --rail: #374151;
+      --rail-fill: #10b981;
     }
     body {
       margin: 0;
@@ -59,6 +61,7 @@
       gap: .5rem;
       align-items: center;
       flex-wrap: wrap;
+      margin-top: .5rem;
     }
     button.play, button.speed {
       background: var(--accent);
@@ -70,6 +73,63 @@
       cursor: pointer;
     }
     button.play:active, button.speed:active { transform: scale(0.98); }
+
+    /* Progress row: slider + time */
+    .progress-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: .5rem;
+      margin-top: .5rem;
+    }
+    .time {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      font-size: .9rem;
+      min-width: 90px;
+      text-align: right;
+    }
+    /* Range styling (works across WebKit/Blink/Firefox reasonably) */
+    .progress {
+      width: 100%;
+      appearance: none;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--rail-fill) 0% 0%, var(--rail) 0% 100%);
+      outline: none;
+    }
+    .progress:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+    /* WebKit thumb */
+    .progress::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid #064e3b;
+      cursor: pointer;
+      margin-top: -5px; /* centers thumb over 8px track */
+    }
+    /* Firefox thumb */
+    .progress::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid #064e3b;
+      cursor: pointer;
+    }
+    /* Firefox track */
+    .progress::-moz-range-track {
+      height: 8px;
+      border-radius: 999px;
+      background: var(--rail);
+    }
+
     footer {
       text-align: center;
       margin-top: 1.5rem;
@@ -82,7 +142,7 @@
   <div class="container">
     <h1>German Audio Practice – Answers 1–10</h1>
 
-    <!-- Shared audio element -->
+    <!-- One shared audio element (iOS-friendly). We switch its src via JS. -->
     <audio id="player" preload="none" playsinline></audio>
 
     <div id="cards" class="grid"></div>
@@ -94,17 +154,62 @@
   </div>
 
   <script>
+    // Data
     const answers = [
-      { en: "I live in Warsaw. My city is beautiful and clean. You can watch football games and there are many hiking trails.",
-        de: "Ich wohne in Warschau. Meine Stadt ist schön und sauber. Man kann Fußballspiele anschauen und es gibt viele Wanderwege." },
-      { en: "In Warsaw, it is a bit foggy and rainy. When it’s hot, I go swimming. When it’s cold, I drink hot chocolate.",
-        de: "In Warschau ist es etwas neblig und regnerisch. Wenn es heiß ist, gehe ich schwimmen. Wenn es kalt ist, trinke ich heiße Schokolade." },
-      // ... (rest of your answers)
+      {
+        en: "I live in Warsaw. My city is beautiful and clean. You can watch football games and there are many hiking trails.",
+        de: "Ich wohne in Warschau. Meine Stadt ist schön und sauber. Man kann Fußballspiele anschauen und es gibt viele Wanderwege."
+      },
+      {
+        en: "In Warsaw, it is a bit foggy and rainy. When it’s hot, I go swimming. When it’s cold, I drink hot chocolate.",
+        de: "In Warschau ist es etwas neblig und regnerisch. Wenn es heiß ist, gehe ich schwimmen. Wenn es kalt ist, trinke ich heiße Schokolade."
+      },
+      {
+        en: "I went to Krakow with my family last fall by car, and we stayed in a hotel.",
+        de: "Ich bin letzten Herbst mit meiner Familie nach Krakau gefahren, mit dem Auto, und habe im Hotel gewohnt."
+      },
+      {
+        en: "I visited the Old Town, the weather was sunny, and the holidays were great.",
+        de: "Ich habe die Altstadt besucht, das Wetter war sonnig, und die Ferien waren großartig."
+      },
+      {
+        en: "I like action films, don’t like romantic movies, and my favorite is Top Gun because it’s exciting.",
+        de: "Ich mag Actionfilme, romantische Filme nicht so gern, und mein Lieblingsfilm ist Top Gun, weil er spannend ist."
+      },
+      {
+        en: "The last film I watched was a Christmas movie at home. It was bad, but next time I will watch Stranger Things.",
+        de: "Der letzte Film, den ich gesehen habe, war ein Weihnachtsfilm zu Hause. Er war schlecht, aber nächstes Mal sehe ich Stranger Things."
+      },
+      {
+        en: "My favorite actor is Tom Cruise because of Top Gun.",
+        de: "Mein Lieblingsschauspieler ist Tom Cruise wegen Top Gun."
+      },
+      {
+        en: "I watch TV on the weekends, I like Stranger Things, I don’t like romantic comedies, and I love Naruto.",
+        de: "Ich sehe am Wochenende fern, mag Stranger Things, mag keine romantischen Komödien und liebe Naruto."
+      },
+      {
+        en: "I like spy novels, I read in bed most nights, and my favorite book is Skyward by Brandon Sanderson.",
+        de: "Ich lese gern Spionageromane, lese meistens abends im Bett, und mein Lieblingsbuch ist Skyward von Brandon Sanderson."
+      },
+      {
+        en: "I sit about 7 hours per week in front of a screen, my parents think that’s fine, I’m not addicted, and I should probably spend more time outside.",
+        de: "Ich sitze etwa 7 Stunden pro Woche vor dem Bildschirm, meine Eltern finden das in Ordnung, ich bin nicht süchtig, und ich sollte wahrscheinlich mehr Zeit draußen verbringen."
+      }
     ];
 
     const cardsEl = document.getElementById("cards");
     const player = document.getElementById("player");
 
+    // Global state for the shared player
+    const state = {
+      activeCard: null,
+      activeFile: null,
+      isPlaying: false,
+      playbackRate: 1
+    };
+
+    // Render cards
     answers.forEach((a, idx) => {
       const n = idx + 1;
       const card = document.createElement("div");
@@ -116,39 +221,196 @@
         <div class="text">${a.en}</div>
         <div class="label">Deutsch</div>
         <div class="text">${a.de}</div>
+
         <div class="actions">
-          <button class="play" data-file="answer${n}.mp3">▶ Play Answer ${n}</button>
-          <button class="speed" data-speed="1">Speed: 100%</button>
+          <button class="play" data-file="answer${n}.mp3" aria-label="Play Answer ${n}">▶ Play Answer ${n}</button>
+          <button class="speed" aria-label="Toggle speed">Speed: 100%</button>
+        </div>
+
+        <div class="progress-row">
+          <input class="progress" type="range" min="0" max="100" value="0" step="0.1" disabled aria-label="Playback position"/>
+          <div class="time"><span class="cur">0:00</span> / <span class="dur">0:00</span></div>
         </div>
       `;
       cardsEl.appendChild(card);
     });
 
-    // Handle play buttons
-    cardsEl.addEventListener("click", (ev) => {
-      const btn = ev.target.closest("button.play");
-      if (!btn) return;
-      const file = btn.getAttribute("data-file");
-      player.src = file;
-      player.play().catch(err => {
-        alert("Unable to play audio. If you’re on iPhone, check Silent Mode and try again.");
-        console.error(err);
-      });
-    });
+    // Utility: format seconds -> M:SS
+    function fmt(t) {
+      if (!isFinite(t) || t < 0) t = 0;
+      const m = Math.floor(t / 60);
+      const s = Math.floor(t % 60).toString().padStart(2, "0");
+      return `${m}:${s}`;
+    }
 
-    // Handle speed toggle
+    // Keep progress bar visually filled via background gradient
+    function setProgressFill(range, pct) {
+      range.style.background = `linear-gradient(to right, var(--rail-fill) 0% ${pct}%, var(--rail) ${pct}% 100%)`;
+    }
+
+    // Find helpers inside a card
+    function parts(card) {
+      return {
+        playBtn: card.querySelector("button.play"),
+        speedBtn: card.querySelector("button.speed"),
+        range: card.querySelector(".progress"),
+        cur: card.querySelector(".cur"),
+        dur: card.querySelector(".dur")
+      };
+    }
+
+    // Reset a card's UI
+    function resetCardUI(card) {
+      if (!card) return;
+      const { playBtn, range, cur } = parts(card);
+      if (playBtn) playBtn.textContent = playBtn.textContent.replace("⏸ Pause", "▶ Play");
+      if (range) {
+        range.disabled = true;
+        range.value = 0;
+        setProgressFill(range, 0);
+      }
+      if (cur) cur.textContent = "0:00";
+    }
+
+    // Update all speed buttons to reflect the global playback rate
+    function syncSpeedButtons() {
+      const label = state.playbackRate === 1 ? "Speed: 100%" : "Speed: 80%";
+      document.querySelectorAll("button.speed").forEach(b => b.textContent = label);
+    }
+
+    // Handle clicks (play/pause + speed toggle)
     cardsEl.addEventListener("click", (ev) => {
-      const btn = ev.target.closest("button.speed");
-      if (!btn) return;
-      if (player.playbackRate === 1) {
-        player.playbackRate = 0.8;
-        btn.textContent = "Speed: 80%";
-      } else {
-        player.playbackRate = 1;
-        btn.textContent = "Speed: 100%";
+      const playBtn = ev.target.closest("button.play");
+      const speedBtn = ev.target.closest("button.speed");
+
+      // Toggle Play/Pause
+      if (playBtn) {
+        const card = playBtn.closest(".card");
+        const file = playBtn.getAttribute("data-file");
+
+        // If same file active
+        if (state.activeFile === file) {
+          if (state.isPlaying) {
+            player.pause();
+          } else {
+            player.play().catch(err => {
+              alert("Unable to play audio. On iPhone, check Silent Mode and try again.");
+              console.error(err);
+            });
+          }
+          return;
+        }
+
+        // Switching to a new file
+        resetCardUI(state.activeCard);
+        state.activeCard = card;
+        state.activeFile = file;
+
+        const { range, dur } = parts(card);
+        if (range) { range.disabled = true; range.value = 0; setProgressFill(range, 0); }
+        if (dur) dur.textContent = "0:00";
+
+        player.src = file;
+        player.playbackRate = state.playbackRate;
+        player.play().catch(err => {
+          alert("Unable to play audio. On iPhone, check Silent Mode and try again.");
+          console.error(err);
+        });
+        return;
+      }
+
+      // Toggle Speed (global)
+      if (speedBtn) {
+        state.playbackRate = state.playbackRate === 1 ? 0.8 : 1;
+        player.playbackRate = state.playbackRate;
+        syncSpeedButtons();
+        return;
       }
     });
+
+    // Scrubbing (seek)
+    cardsEl.addEventListener("input", (ev) => {
+      const range = ev.target.closest(".progress");
+      if (!range) return;
+      const card = range.closest(".card");
+      if (card !== state.activeCard) return; // Only active card controls player
+
+      if (isFinite(player.duration) && player.duration > 0) {
+        const pct = Number(range.value);
+        const t = (pct / 100) * player.duration;
+        player.currentTime = t;
+        const { cur } = parts(card);
+        if (cur) cur.textContent = fmt(player.currentTime);
+        setProgressFill(range, pct);
+      }
+    });
+
+    // Audio events: keep UI in sync
+    player.addEventListener("loadedmetadata", () => {
+      const card = state.activeCard;
+      if (!card) return;
+      const { dur, range } = parts(card);
+      if (dur) dur.textContent = fmt(player.duration);
+      if (range) {
+        range.disabled = false;
+        // Initialize gradient at 0
+        setProgressFill(range, 0);
+      }
+    });
+
+    player.addEventListener("timeupdate", () => {
+      const card = state.activeCard;
+      if (!card || !isFinite(player.duration) || player.duration <= 0) return;
+      const { range, cur } = parts(card);
+      const pct = 100 * (player.currentTime / player.duration);
+      if (range) {
+        range.value = pct;
+        setProgressFill(range, pct);
+      }
+      if (cur) cur.textContent = fmt(player.currentTime);
+    });
+
+    player.addEventListener("play", () => {
+      state.isPlaying = true;
+      const card = state.activeCard;
+      if (!card) return;
+      const { playBtn } = parts(card);
+      if (playBtn) {
+        const n = playBtn.textContent.replace(/▶\s*Play/, "").trim();
+        playBtn.textContent = `⏸ Pause ${n}`;
+      }
+    });
+
+    player.addEventListener("pause", () => {
+      state.isPlaying = false;
+      const card = state.activeCard;
+      if (!card) return;
+      const { playBtn } = parts(card);
+      if (playBtn) {
+        const n = playBtn.textContent.replace(/⏸\s*Pause/, "").trim();
+        playBtn.textContent = `▶ Play ${n}`;
+      }
+    });
+
+    player.addEventListener("ended", () => {
+      // Reset UI when track ends
+      const card = state.activeCard;
+      if (!card) return;
+      const { playBtn, range, cur } = parts(card);
+      if (playBtn) {
+        const n = playBtn.textContent.replace(/⏸\s*Pause/, "").trim();
+        playBtn.textContent = `▶ Play ${n}`;
+      }
+      if (range) {
+        range.value = 0;
+        setProgressFill(range, 0);
+      }
+      if (cur) cur.textContent = "0:00";
+      state.isPlaying = false;
+    });
+
+    // Initialize speed labels
+    syncSpeedButtons();
   </script>
 </body>
 </html>
-
