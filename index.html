@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>German Q&A Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">German practice</p>
+          <h1>Question &amp; Answer Modules</h1>
+        </div>
+        <button id="collapse-all-btn" class="ghost-btn" type="button">Collapse all</button>
+      </header>
+
+      <main id="main-content" class="content" aria-live="polite">
+        <section id="module-header" class="module-header skeleton"></section>
+        <section id="groups-container" class="groups"></section>
+      </main>
+
+      <nav id="module-nav" class="bottom-nav" aria-label="Question modules"></nav>
+    </div>
+
+    <audio id="shared-player" preload="none"></audio>
+    <script src="app.js"></script>
+  </body>
+</html>

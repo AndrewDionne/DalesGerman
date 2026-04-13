@@ -1,0 +1,148 @@
+{
+  "modules": [
+    {
+      "id": "3",
+      "title": "3",
+      "description": "Practice set for 3.",
+      "groups": [
+        {
+          "title": "Breakfast / yesterday / this weekend",
+          "items": [
+            {
+              "question_de": "Was isst und trinkst du zum Frühstück? Ist das gesund? Was hast du gestern gegessen und getrunken? Was wirst du dieses Wochenende essen und trinken?",
+              "question_en": "What do you eat and drink for breakfast? Is that healthy? What did you eat and drink yesterday? What will you eat and drink this weekend?",
+              "answer_de": "Zum Frühstück esse ich normalerweise Müsli oder Toast und ich trinke Orangensaft. Ich finde das ziemlich gesund. Gestern habe ich Pizza gegessen und Wasser getrunken. Dieses Wochenende werde ich ein Sandwich essen und Milch trinken.",
+              "answer_en": "For breakfast I normally eat cereal or toast and I drink orange juice. I think that is quite healthy. Yesterday I ate pizza and drank water. This weekend I will eat a sandwich and drink milk.",
+              "q_audio": "audio/3_breakfast_yesterday_this_weekend_001_q.mp3",
+              "a_audio": "audio/3_breakfast_yesterday_this_weekend_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Restaurant",
+          "items": [
+            {
+              "question_de": "Was nimmst du normalerweise in einem Restaurant? Was hast du das letzte Mal gegessen und getrunken, als du in einem Restaurant warst? Wie war das?",
+              "question_en": "What do you normally order in a restaurant? What did you eat and drink the last time you were in a restaurant? What was it like?",
+              "answer_de": "In einem Restaurant nehme ich normalerweise Hähnchenstreifen. Das letzte Mal habe ich Pasta gegessen und Limonade getrunken. Es war sehr lecker und das Restaurant war ziemlich schön.",
+              "answer_en": "In a restaurant I normally order chicken strips. Last time I ate pasta and drank lemonade. It was very tasty and the restaurant was quite nice.",
+              "q_audio": "audio/3_restaurant_001_q.mp3",
+              "a_audio": "audio/3_restaurant_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Favourite food / cooking / sandwich",
+          "items": [
+            {
+              "question_de": "Was ist dein Lieblingsessen? Warum so? Kochst du gern? Wie macht man dein Lieblingssandwich?",
+              "question_en": "What is your favourite food? Why? Do you like cooking? How do you make your favourite sandwich?",
+              "answer_de": "Mein Lieblingsessen ist Pizza, weil sie lecker ist. Ich koche nicht oft, aber ich helfe manchmal zu Hause. Mein Lieblingssandwich macht man mit Pute, Salat und Mayonnaise. Dann legt man alles ins Brot und isst es.",
+              "answer_en": "My favourite food is pizza because it is tasty. I do not cook often, but I sometimes help at home. You make my favourite sandwich with turkey, lettuce, and mayonnaise. Then you put everything in the bread and eat it.",
+              "q_audio": "audio/3_favourite_food_cooking_sandwich_001_q.mp3",
+              "a_audio": "audio/3_favourite_food_cooking_sandwich_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Fit and healthy",
+          "items": [
+            {
+              "question_de": "Was muss man machen, um fit und gesund zu sein? (Essen / Schlafroutine / Training?)",
+              "question_en": "What must you do to be fit and healthy? (Food / sleep routine / exercise?)",
+              "answer_de": "Um fit und gesund zu sein, muss man gut essen, genug Wasser trinken und viel schlafen. Man muss auch aktiv sein und nicht zu viele Süßigkeiten essen.",
+              "answer_en": "To be fit and healthy, you must eat well, drink enough water, and sleep a lot. You must also be active and not eat too many sweets.",
+              "q_audio": "audio/3_fit_and_healthy_001_q.mp3",
+              "a_audio": "audio/3_fit_and_healthy_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Are you active?",
+          "items": [
+            {
+              "question_de": "Bist du aktiv? Was machst du? Was wirst du dieses Wochenende machen? Was hast du letzte Woche gemacht?",
+              "question_en": "Are you active? What do you do? What will you do this weekend? What did you do last week?",
+              "answer_de": "Ja, ich bin ziemlich aktiv. Ich spiele Hockey. Dieses Wochenende spiele ich bei einem Hockeyturnier. Letzte Woche war ich in einem Hockeycamp.",
+              "answer_en": "Yes, I am quite active. I play hockey. This weekend I am playing in a hockey tournament. Last week I was at a hockey camp.",
+              "q_audio": "audio/3_are_you_active_001_q.mp3",
+              "a_audio": "audio/3_are_you_active_001_a.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "4",
+      "description": "Practice set for 4.",
+      "groups": [
+        {
+          "title": "Youth hostel – must / must not",
+          "items": [
+            {
+              "question_de": "Was muss man in einer Jugendherberge (nicht) machen?",
+              "question_en": "What must you do (or not do) in a youth hostel?",
+              "answer_de": "In einer Jugendherberge muss man sein Zimmer sauber halten. Man muss auch pünktlich zum Essen sein. Man darf nicht im Flur rennen oder zu laut sein.",
+              "answer_en": "In a youth hostel you must keep your room clean. You must also be on time for meals. You cannot run in the hallways or be too loud.",
+              "q_audio": "audio/4_youth_hostel_must_must_not_001_q.mp3",
+              "a_audio": "audio/4_youth_hostel_must_must_not_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Youth hostel – allowed / not allowed",
+          "items": [
+            {
+              "question_de": "Was darf man in einer Jugendherberge (nicht) machen?",
+              "question_en": "What are you allowed (or not allowed) to do in a youth hostel?",
+              "answer_de": "In einer Jugendherberge darf man Spiele spielen und mit Freunden sprechen. Man darf auch im Gemeinschaftsraum sitzen. Aber man darf nicht laut sein oder spät in der Nacht Musik hören.",
+              "answer_en": "In a youth hostel you are allowed to play games and talk with friends. You are also allowed to sit in the common room. But you are not allowed to be loud or listen to music late at night.",
+              "q_audio": "audio/4_youth_hostel_allowed_not_allowed_001_q.mp3",
+              "a_audio": "audio/4_youth_hostel_allowed_not_allowed_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Daily routine",
+          "items": [
+            {
+              "question_de": "Wie ist dein Alltag? Beschreibe deine Routine vor der Schule. Beschreibe deine Routine nach der Schule. Und am Wochenende?",
+              "question_en": "What is your daily routine like? Describe your routine before school. Describe your routine after school. And at the weekend?",
+              "answer_de": "Vor der Schule stehe ich um halb sieben auf, ich frühstücke und ich gehe zur Schule. Nach der Schule mache ich meine Hausaufgaben und ich gehe mit meinem Hund spazieren. Am Wochenende schlafe ich länger. Ich spiele oft Hockey oder ich gehe zum Kunstkurs.",
+              "answer_en": "Before school I get up at 6:30, I eat breakfast, and I go to school. After school I do my homework and walk my dog. On the weekend I sleep in. I often play hockey or go to art class.",
+              "q_audio": "audio/4_daily_routine_001_q.mp3",
+              "a_audio": "audio/4_daily_routine_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Favourite festival",
+          "items": [
+            {
+              "question_de": "Was ist dein Lieblingsfest? Wo und wann ist das Fest? Wie ist das Fest? Wie kommt man zum Festival? Was gibt es dort zu sehen und zu tun?",
+              "question_en": "What is your favourite festival? Where and when is the festival? What is the festival like? How do you get to the festival? What is there to see and do there?",
+              "answer_de": "Mein Lieblingsfest ist ein Musikfestival im Sommer. Es ist in meiner Stadt und es ist sehr spannend. Man kann mit dem Bus oder mit dem Auto dorthin fahren. Dort gibt es Musik, Essen und viele Leute. Man kann tanzen, essen und Spaß haben.",
+              "answer_en": "My favourite festival is a music festival in the summer. It is in my town and it is very exciting. You can get there by bus or by car. There is music, food, and lots of people there. You can dance, eat, and have fun.",
+              "q_audio": "audio/4_favourite_festival_001_q.mp3",
+              "a_audio": "audio/4_favourite_festival_001_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Festival last weekend",
+          "items": [
+            {
+              "question_de": "Du warst letztes Wochenende auf einem Fest. Beschreib es. Was hast du gesehen oder gemacht? Wie war das Wetter? Wirst du nächstes Jahr zum Fest gehen?",
+              "question_en": "You were at a festival last weekend. Describe it. What did you see or do? What was the weather like? Will you go to the festival next year?",
+              "answer_de": "Letztes Wochenende war ich mit meiner Familie auf einem Fest. Ich habe Musik gehört, ich habe gutes Essen gegessen und ich habe viele Leute gesehen. Das Wetter war sonnig und warm. Nächstes Jahr werde ich wieder hingehen, weil es super war.",
+              "answer_en": "Last weekend I was at a festival with my family. I listened to music, I ate good food, and I saw lots of people. The weather was sunny and warm. Next year I will go again because it was great.",
+              "q_audio": "audio/4_festival_last_weekend_001_q.mp3",
+              "a_audio": "audio/4_festival_last_weekend_001_a.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
