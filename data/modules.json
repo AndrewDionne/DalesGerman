@@ -2,11 +2,11 @@
   "modules": [
     {
       "id": "1",
-      "title": "Moduł 1",
-      "description": "Podstawowe pytania o niewidzialnego przyjaciela: imię, wiek, wygląd i ubiór.",
+      "title": "Module 1",
+      "description": "Basic questions about your invisible friend: name, age, appearance, and clothes.",
       "groups": [
         {
-          "title": "Imię i wiek",
+          "title": "Name and age",
           "items": [
             {
               "question_pl": "Jak ma na imię twój przyjaciel?",
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "title": "Włosy i oczy",
+          "title": "Hair and eyes",
           "items": [
             {
               "question_pl": "Jaki kolor mają włosy twojego przyjaciela?",
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "title": "Wzrost i wygląd",
+          "title": "Height and appearance",
           "items": [
             {
               "question_pl": "Czy twój przyjaciel jest wysoki?",
@@ -93,7 +93,7 @@
           ]
         },
         {
-          "title": "Ubrania",
+          "title": "Clothes",
           "items": [
             {
               "question_pl": "Co twój przyjaciel zwykle nosi?",
@@ -125,11 +125,11 @@
     },
     {
       "id": "2",
-      "title": "Moduł 2",
-      "description": "Pytania o charakter, zainteresowania i to, co twój przyjaciel lubi robić.",
+      "title": "Module 2",
+      "description": "Questions about personality, hobbies, sport, and favourite things.",
       "groups": [
         {
-          "title": "Charakter",
+          "title": "Personality",
           "items": [
             {
               "question_pl": "Jaki charakter ma twój przyjaciel?",
@@ -158,7 +158,7 @@
           ]
         },
         {
-          "title": "Zainteresowania",
+          "title": "Interests",
           "items": [
             {
               "question_pl": "Co lubi robić twój przyjaciel po szkole?",
@@ -187,7 +187,7 @@
           ]
         },
         {
-          "title": "Sport i aktywność",
+          "title": "Sport and activity",
           "items": [
             {
               "question_pl": "Jaki sport uprawia twój przyjaciel?",
@@ -216,7 +216,7 @@
           ]
         },
         {
-          "title": "Ulubione rzeczy",
+          "title": "Favourite things",
           "items": [
             {
               "question_pl": "Jakie jest ulubione jedzenie twojego przyjaciela?",
@@ -248,11 +248,11 @@
     },
     {
       "id": "3",
-      "title": "Moduł 3",
-      "description": "Krótkie odpowiedzi o rodzinie, szkole, domu i codziennym życiu niewidzialnego przyjaciela.",
+      "title": "Module 3",
+      "description": "Short answers about family, home, school, and daily routine.",
       "groups": [
         {
-          "title": "Rodzina",
+          "title": "Family",
           "items": [
             {
               "question_pl": "Czy twój przyjaciel ma rodzeństwo?",
@@ -281,7 +281,7 @@
           ]
         },
         {
-          "title": "Dom i miasto",
+          "title": "Home and town",
           "items": [
             {
               "question_pl": "Gdzie mieszka twój przyjaciel?",
@@ -310,7 +310,7 @@
           ]
         },
         {
-          "title": "Szkoła",
+          "title": "School",
           "items": [
             {
               "question_pl": "Do jakiej szkoły chodzi twój przyjaciel?",
@@ -339,7 +339,7 @@
           ]
         },
         {
-          "title": "Codzienna rutyna",
+          "title": "Daily routine",
           "items": [
             {
               "question_pl": "O której godzinie twój przyjaciel wstaje?",

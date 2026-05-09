@@ -53,21 +53,17 @@ function wireGlobalEvents() {
   dom.groupsContainer.addEventListener('click', (event) => {
     const summaryButton = event.target.closest('.qa-summary');
     const audioButton = event.target.closest('.audio-btn');
-    const toggleButton = event.target.closest('.text-toggle-btn');
 
     if (summaryButton) {
       const row = summaryButton.closest('.qa-row');
+      const willExpand = !row.classList.contains('expanded');
       row.classList.toggle('expanded');
+      summaryButton.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
       return;
     }
 
     if (audioButton) {
       playAudio(audioButton);
-      return;
-    }
-
-    if (toggleButton) {
-      toggleLanguage(toggleButton.closest('.qa-row'));
     }
   });
 
@@ -75,7 +71,13 @@ function wireGlobalEvents() {
   dom.sharedPlayer.addEventListener('pause', clearPlayingState);
 
   dom.collapseAllBtn.addEventListener('click', () => {
-    document.querySelectorAll('.qa-row.expanded').forEach((row) => row.classList.remove('expanded'));
+    document.querySelectorAll('.qa-row.expanded').forEach((row) => {
+      row.classList.remove('expanded');
+      const summary = row.querySelector('.qa-summary');
+      if (summary) {
+        summary.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 }
 
@@ -115,7 +117,7 @@ function renderGroup(group) {
     <section class="group-card">
       <div class="group-header">
         <h3 class="group-title">${escapeHtml(group.title)}</h3>
-        <span class="group-count">${group.items.length} pytań</span>
+        <span class="group-count">${group.items.length} questions</span>
       </div>
       <div class="question-list">
         ${group.items.map((item, index) => renderQuestionRow(item, index)).join('')}
@@ -125,41 +127,60 @@ function renderGroup(group) {
 }
 
 function renderQuestionRow(item, index) {
-  const questionPl = getQuestionPrimary(item);
-  const answerPl = getAnswerPrimary(item);
+  const questionPl = getQuestionPolish(item);
+  const answerPl = getAnswerPolish(item);
+  const questionEn = getQuestionEnglish(item);
+  const answerEn = getAnswerEnglish(item);
+
   return `
-    <article class="qa-row" data-language="pl">
+    <article class="qa-row">
       <button type="button" class="qa-summary" aria-expanded="false">
         <div class="qa-summary-main">
-          <span class="qa-label">Pytanie ${index + 1}</span>
-          <span class="qa-summary-text">${escapeHtml(questionPl)}</span>
+          <span class="qa-label">Question ${index + 1}</span>
+          <span class="qa-summary-text">${escapeHtml(questionEn)}</span>
+          <span class="qa-summary-subtext">${escapeHtml(questionPl)}</span>
         </div>
         <span class="chevron">⌄</span>
       </button>
 
       <div class="qa-detail">
+        <div class="language-section english-section">
+          <div class="language-section-header">English</div>
+          <div class="text-panels two-up">
+            <div class="text-panel">
+              <span class="text-panel-label">Question in English</span>
+              <span class="text-panel-value">${escapeHtml(questionEn)}</span>
+            </div>
+            <div class="text-panel">
+              <span class="text-panel-label">Answer in English</span>
+              <span class="text-panel-value">${escapeHtml(answerEn)}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="language-section polish-section">
+          <div class="language-section-header">Polish</div>
+          <div class="text-panels two-up">
+            <div class="text-panel">
+              <span class="text-panel-label">Question in Polish</span>
+              <span class="text-panel-value">${escapeHtml(questionPl)}</span>
+            </div>
+            <div class="text-panel">
+              <span class="text-panel-label">Answer in Polish</span>
+              <span class="text-panel-value">${escapeHtml(answerPl)}</span>
+            </div>
+          </div>
+        </div>
+
         <div class="audio-controls">
           <button type="button" class="audio-btn" data-audio-src="${escapeAttribute(item.q_audio || '')}" data-audio-kind="question">
             Q
-            <span>Odtwórz polskie pytanie</span>
+            <span>Play Polish question</span>
           </button>
           <button type="button" class="audio-btn" data-audio-src="${escapeAttribute(item.a_audio || '')}" data-audio-kind="answer">
             A
-            <span>Odtwórz polską odpowiedź</span>
+            <span>Play Polish answer</span>
           </button>
-        </div>
-
-        <button type="button" class="text-toggle-btn">Pokaż angielski</button>
-
-        <div class="text-panels">
-          <div class="text-panel">
-            <span class="text-panel-label">Pytanie</span>
-            <span class="text-panel-value" data-role="question-text">${escapeHtml(questionPl)}</span>
-          </div>
-          <div class="text-panel">
-            <span class="text-panel-label">Odpowiedź</span>
-            <span class="text-panel-value" data-role="answer-text">${escapeHtml(answerPl)}</span>
-          </div>
         </div>
 
         <div class="qa-payload" data-payload="${escapeAttribute(encodeURIComponent(JSON.stringify(item)))}"></div>
@@ -168,35 +189,20 @@ function renderQuestionRow(item, index) {
   `;
 }
 
-function getQuestionPrimary(item) {
+function getQuestionPolish(item) {
   return item.question_pl || item.question_de || item.question || '';
 }
 
-function getAnswerPrimary(item) {
+function getAnswerPolish(item) {
   return item.answer_pl || item.answer_de || item.answer || '';
 }
 
 function getQuestionEnglish(item) {
-  return item.question_en || getQuestionPrimary(item);
+  return item.question_en || getQuestionPolish(item);
 }
 
 function getAnswerEnglish(item) {
-  return item.answer_en || getAnswerPrimary(item);
-}
-
-function toggleLanguage(row) {
-  const payload = getRowPayload(row);
-  const currentLanguage = row.dataset.language === 'en' ? 'en' : 'pl';
-  const nextLanguage = currentLanguage === 'pl' ? 'en' : 'pl';
-
-  row.dataset.language = nextLanguage;
-  row.querySelector('[data-role="question-text"]').textContent =
-    nextLanguage === 'pl' ? getQuestionPrimary(payload) : getQuestionEnglish(payload);
-  row.querySelector('[data-role="answer-text"]').textContent =
-    nextLanguage === 'pl' ? getAnswerPrimary(payload) : getAnswerEnglish(payload);
-  row.querySelector('.text-toggle-btn').textContent = nextLanguage === 'pl' ? 'Pokaż angielski' : 'Pokaż polski';
-  row.querySelector('.qa-summary-text').textContent =
-    nextLanguage === 'pl' ? getQuestionPrimary(payload) : getQuestionEnglish(payload);
+  return item.answer_en || getAnswerPolish(item);
 }
 
 function getRowPayload(row) {
@@ -231,7 +237,7 @@ function playAudio(button) {
 }
 
 function speakFallback(button, payload) {
-  const utteranceText = button.dataset.audioKind === 'answer' ? getAnswerPrimary(payload) : getQuestionPrimary(payload);
+  const utteranceText = button.dataset.audioKind === 'answer' ? getAnswerPolish(payload) : getQuestionPolish(payload);
 
   if (!('speechSynthesis' in window) || !utteranceText) {
     clearPlayingState();
@@ -268,13 +274,13 @@ function clearPlayingState() {
 
 function renderEmptyState() {
   dom.moduleHeader.classList.remove('skeleton');
-  dom.moduleHeader.innerHTML = '<h2 class="module-title">Brak modułów</h2><p class="module-description">Dodaj treść do pliku data/modules.json i odśwież stronę.</p>';
-  dom.groupsContainer.innerHTML = '<div class="empty-state">W pliku JSON nie ma jeszcze modułów z pytaniami.</div>';
+  dom.moduleHeader.innerHTML = '<h2 class="module-title">No modules yet</h2><p class="module-description">Add content to data/modules.json and refresh the page.</p>';
+  dom.groupsContainer.innerHTML = '<div class="empty-state">There are no question modules in the JSON file yet.</div>';
 }
 
 function renderErrorState(error) {
   dom.moduleHeader.classList.remove('skeleton');
-  dom.moduleHeader.innerHTML = '<h2 class="module-title">Nie udało się wczytać aplikacji</h2><p class="module-description">Sprawdź ścieżkę JSON i wdroż stronę ponownie.</p>';
+  dom.moduleHeader.innerHTML = '<h2 class="module-title">The app could not load</h2><p class="module-description">Check the JSON path and deploy the site again.</p>';
   dom.groupsContainer.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
 }
 
