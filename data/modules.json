@@ -12,33 +12,25 @@
               "question_pl": "Jak ma na imię twój przyjaciel?",
               "question_en": "What is your friend's name?",
               "answer_pl": "Mój przyjaciel ma na imię Kuba.",
-              "answer_en": "My friend's name is Kuba.",
-              "q_audio": "audio/1_imie_i_wiek_001_q.mp3",
-              "a_audio": "audio/1_imie_i_wiek_001_a.mp3"
+              "answer_en": "My friend's name is Kuba."
             },
             {
               "question_pl": "Ile lat ma twój przyjaciel?",
               "question_en": "How old is your friend?",
               "answer_pl": "Mój przyjaciel ma trzynaście lat.",
-              "answer_en": "My friend is thirteen years old.",
-              "q_audio": "audio/1_imie_i_wiek_002_q.mp3",
-              "a_audio": "audio/1_imie_i_wiek_002_a.mp3"
+              "answer_en": "My friend is thirteen years old."
             },
             {
               "question_pl": "Kiedy ma urodziny twój przyjaciel?",
               "question_en": "When is your friend's birthday?",
               "answer_pl": "Mój przyjaciel ma urodziny w maju.",
-              "answer_en": "My friend has a birthday in May.",
-              "q_audio": "audio/1_imie_i_wiek_003_q.mp3",
-              "a_audio": "audio/1_imie_i_wiek_003_a.mp3"
+              "answer_en": "My friend has a birthday in May."
             },
             {
               "question_pl": "Skąd jest twój przyjaciel?",
               "question_en": "Where is your friend from?",
               "answer_pl": "Mój przyjaciel jest z Polski.",
-              "answer_en": "My friend is from Poland.",
-              "q_audio": "audio/1_imie_i_wiek_004_q.mp3",
-              "a_audio": "audio/1_imie_i_wiek_004_a.mp3"
+              "answer_en": "My friend is from Poland."
             }
           ]
         },
@@ -49,33 +41,25 @@
               "question_pl": "Jaki kolor mają włosy twojego przyjaciela?",
               "question_en": "What colour is your friend's hair?",
               "answer_pl": "Jego włosy są brązowe.",
-              "answer_en": "His hair is brown.",
-              "q_audio": "audio/1_wosy_i_oczy_005_q.mp3",
-              "a_audio": "audio/1_wosy_i_oczy_005_a.mp3"
+              "answer_en": "His hair is brown."
             },
             {
               "question_pl": "Jakie oczy ma twój przyjaciel?",
               "question_en": "What eyes does your friend have?",
               "answer_pl": "On ma niebieskie oczy.",
-              "answer_en": "He has blue eyes.",
-              "q_audio": "audio/1_wosy_i_oczy_006_q.mp3",
-              "a_audio": "audio/1_wosy_i_oczy_006_a.mp3"
+              "answer_en": "He has blue eyes."
             },
             {
               "question_pl": "Czy twój przyjaciel ma długie włosy?",
               "question_en": "Does your friend have long hair?",
               "answer_pl": "Nie, on ma krótkie włosy.",
-              "answer_en": "No, he has short hair.",
-              "q_audio": "audio/1_wosy_i_oczy_007_q.mp3",
-              "a_audio": "audio/1_wosy_i_oczy_007_a.mp3"
+              "answer_en": "No, he has short hair."
             },
             {
               "question_pl": "Czy twój przyjaciel nosi okulary?",
               "question_en": "Does your friend wear glasses?",
               "answer_pl": "Tak, on nosi okulary.",
-              "answer_en": "Yes, he wears glasses.",
-              "q_audio": "audio/1_wosy_i_oczy_008_q.mp3",
-              "a_audio": "audio/1_wosy_i_oczy_008_a.mp3"
+              "answer_en": "Yes, he wears glasses."
             }
           ]
         },
@@ -86,33 +70,25 @@
               "question_pl": "Czy twój przyjaciel jest wysoki?",
               "question_en": "Is your friend tall?",
               "answer_pl": "Tak, on jest dosyć wysoki.",
-              "answer_en": "Yes, he is quite tall.",
-              "q_audio": "audio/1_wzrost_i_wyglad_009_q.mp3",
-              "a_audio": "audio/1_wzrost_i_wyglad_009_a.mp3"
+              "answer_en": "Yes, he is quite tall."
             },
             {
               "question_pl": "Czy twój przyjaciel jest niski?",
               "question_en": "Is your friend short?",
               "answer_pl": "Nie, on nie jest niski.",
-              "answer_en": "No, he is not short.",
-              "q_audio": "audio/1_wzrost_i_wyglad_010_q.mp3",
-              "a_audio": "audio/1_wzrost_i_wyglad_010_a.mp3"
+              "answer_en": "No, he is not short."
             },
             {
               "question_pl": "Czy twój przyjaciel jest szczupły?",
               "question_en": "Is your friend slim?",
               "answer_pl": "Tak, on jest szczupły.",
-              "answer_en": "Yes, he is slim.",
-              "q_audio": "audio/1_wzrost_i_wyglad_011_q.mp3",
-              "a_audio": "audio/1_wzrost_i_wyglad_011_a.mp3"
+              "answer_en": "Yes, he is slim."
             },
             {
               "question_pl": "Jak wygląda twarz twojego przyjaciela?",
               "question_en": "What does your friend's face look like?",
               "answer_pl": "On ma okrągłą twarz i miły uśmiech.",
-              "answer_en": "He has a round face and a nice smile.",
-              "q_audio": "audio/1_wzrost_i_wyglad_012_q.mp3",
-              "a_audio": "audio/1_wzrost_i_wyglad_012_a.mp3"
+              "answer_en": "He has a round face and a nice smile."
             }
           ]
         },
@@ -123,33 +99,25 @@
               "question_pl": "Co twój przyjaciel zwykle nosi?",
               "question_en": "What does your friend usually wear?",
               "answer_pl": "On zwykle nosi dżinsy i bluzę.",
-              "answer_en": "He usually wears jeans and a hoodie.",
-              "q_audio": "audio/1_ubrania_013_q.mp3",
-              "a_audio": "audio/1_ubrania_013_a.mp3"
+              "answer_en": "He usually wears jeans and a hoodie."
             },
             {
               "question_pl": "Jaki jest ulubiony kolor ubrań twojego przyjaciela?",
               "question_en": "What is your friend's favourite clothing colour?",
               "answer_pl": "Jego ulubiony kolor to zielony.",
-              "answer_en": "His favourite colour is green.",
-              "q_audio": "audio/1_ubrania_014_q.mp3",
-              "a_audio": "audio/1_ubrania_014_a.mp3"
+              "answer_en": "His favourite colour is green."
             },
             {
               "question_pl": "Czy twój przyjaciel nosi czapkę?",
               "question_en": "Does your friend wear a hat?",
               "answer_pl": "Tak, czasami nosi czarną czapkę.",
-              "answer_en": "Yes, sometimes he wears a black hat.",
-              "q_audio": "audio/1_ubrania_015_q.mp3",
-              "a_audio": "audio/1_ubrania_015_a.mp3"
+              "answer_en": "Yes, sometimes he wears a black hat."
             },
             {
               "question_pl": "Jakie buty nosi twój przyjaciel?",
               "question_en": "What shoes does your friend wear?",
               "answer_pl": "On nosi sportowe buty.",
-              "answer_en": "He wears trainers.",
-              "q_audio": "audio/1_ubrania_016_q.mp3",
-              "a_audio": "audio/1_ubrania_016_a.mp3"
+              "answer_en": "He wears trainers."
             }
           ]
         }
@@ -167,33 +135,25 @@
               "question_pl": "Jaki charakter ma twój przyjaciel?",
               "question_en": "What is your friend like?",
               "answer_pl": "Mój przyjaciel jest bardzo miły.",
-              "answer_en": "My friend is very kind.",
-              "q_audio": "audio/2_charakter_001_q.mp3",
-              "a_audio": "audio/2_charakter_001_a.mp3"
+              "answer_en": "My friend is very kind."
             },
             {
               "question_pl": "Czy twój przyjaciel jest zabawny?",
               "question_en": "Is your friend funny?",
               "answer_pl": "Tak, on jest bardzo zabawny.",
-              "answer_en": "Yes, he is very funny.",
-              "q_audio": "audio/2_charakter_002_q.mp3",
-              "a_audio": "audio/2_charakter_002_a.mp3"
+              "answer_en": "Yes, he is very funny."
             },
             {
               "question_pl": "Czy twój przyjaciel jest nieśmiały?",
               "question_en": "Is your friend shy?",
               "answer_pl": "Nie, on jest raczej pewny siebie.",
-              "answer_en": "No, he is rather confident.",
-              "q_audio": "audio/2_charakter_003_q.mp3",
-              "a_audio": "audio/2_charakter_003_a.mp3"
+              "answer_en": "No, he is rather confident."
             },
             {
               "question_pl": "Czy twój przyjaciel jest pracowity?",
               "question_en": "Is your friend hard-working?",
               "answer_pl": "Tak, on jest bardzo pracowity.",
-              "answer_en": "Yes, he is very hard-working.",
-              "q_audio": "audio/2_charakter_004_q.mp3",
-              "a_audio": "audio/2_charakter_004_a.mp3"
+              "answer_en": "Yes, he is very hard-working."
             }
           ]
         },
@@ -204,33 +164,25 @@
               "question_pl": "Co lubi robić twój przyjaciel po szkole?",
               "question_en": "What does your friend like doing after school?",
               "answer_pl": "Po szkole on lubi grać w piłkę nożną.",
-              "answer_en": "After school he likes playing football.",
-              "q_audio": "audio/2_zainteresowania_005_q.mp3",
-              "a_audio": "audio/2_zainteresowania_005_a.mp3"
+              "answer_en": "After school he likes playing football."
             },
             {
               "question_pl": "Czy twój przyjaciel lubi muzykę?",
               "question_en": "Does your friend like music?",
               "answer_pl": "Tak, on bardzo lubi muzykę.",
-              "answer_en": "Yes, he likes music very much.",
-              "q_audio": "audio/2_zainteresowania_006_q.mp3",
-              "a_audio": "audio/2_zainteresowania_006_a.mp3"
+              "answer_en": "Yes, he likes music very much."
             },
             {
               "question_pl": "Jakiej muzyki słucha twój przyjaciel?",
               "question_en": "What music does your friend listen to?",
               "answer_pl": "On słucha muzyki pop.",
-              "answer_en": "He listens to pop music.",
-              "q_audio": "audio/2_zainteresowania_007_q.mp3",
-              "a_audio": "audio/2_zainteresowania_007_a.mp3"
+              "answer_en": "He listens to pop music."
             },
             {
               "question_pl": "Czy twój przyjaciel lubi czytać?",
               "question_en": "Does your friend like reading?",
               "answer_pl": "Tak, on lubi czytać komiksy.",
-              "answer_en": "Yes, he likes reading comics.",
-              "q_audio": "audio/2_zainteresowania_008_q.mp3",
-              "a_audio": "audio/2_zainteresowania_008_a.mp3"
+              "answer_en": "Yes, he likes reading comics."
             }
           ]
         },
@@ -241,33 +193,25 @@
               "question_pl": "Jaki sport uprawia twój przyjaciel?",
               "question_en": "What sport does your friend do?",
               "answer_pl": "Mój przyjaciel gra w koszykówkę.",
-              "answer_en": "My friend plays basketball.",
-              "q_audio": "audio/2_sport_i_aktywnosc_009_q.mp3",
-              "a_audio": "audio/2_sport_i_aktywnosc_009_a.mp3"
+              "answer_en": "My friend plays basketball."
             },
             {
               "question_pl": "Czy twój przyjaciel jest aktywny?",
               "question_en": "Is your friend active?",
               "answer_pl": "Tak, on jest bardzo aktywny.",
-              "answer_en": "Yes, he is very active.",
-              "q_audio": "audio/2_sport_i_aktywnosc_010_q.mp3",
-              "a_audio": "audio/2_sport_i_aktywnosc_010_a.mp3"
+              "answer_en": "Yes, he is very active."
             },
             {
               "question_pl": "Co robi twój przyjaciel w weekend?",
               "question_en": "What does your friend do at the weekend?",
               "answer_pl": "W weekend on jeździ na rowerze.",
-              "answer_en": "At the weekend he rides his bike.",
-              "q_audio": "audio/2_sport_i_aktywnosc_011_q.mp3",
-              "a_audio": "audio/2_sport_i_aktywnosc_011_a.mp3"
+              "answer_en": "At the weekend he rides his bike."
             },
             {
               "question_pl": "Czy twój przyjaciel lubi pływać?",
               "question_en": "Does your friend like swimming?",
               "answer_pl": "Tak, latem on lubi pływać.",
-              "answer_en": "Yes, in summer he likes swimming.",
-              "q_audio": "audio/2_sport_i_aktywnosc_012_q.mp3",
-              "a_audio": "audio/2_sport_i_aktywnosc_012_a.mp3"
+              "answer_en": "Yes, in summer he likes swimming."
             }
           ]
         },
@@ -278,33 +222,25 @@
               "question_pl": "Jakie jest ulubione jedzenie twojego przyjaciela?",
               "question_en": "What is your friend's favourite food?",
               "answer_pl": "Jego ulubione jedzenie to pizza.",
-              "answer_en": "His favourite food is pizza.",
-              "q_audio": "audio/2_ulubione_rzeczy_013_q.mp3",
-              "a_audio": "audio/2_ulubione_rzeczy_013_a.mp3"
+              "answer_en": "His favourite food is pizza."
             },
             {
               "question_pl": "Jaki jest ulubiony napój twojego przyjaciela?",
               "question_en": "What is your friend's favourite drink?",
               "answer_pl": "Jego ulubiony napój to sok jabłkowy.",
-              "answer_en": "His favourite drink is apple juice.",
-              "q_audio": "audio/2_ulubione_rzeczy_014_q.mp3",
-              "a_audio": "audio/2_ulubione_rzeczy_014_a.mp3"
+              "answer_en": "His favourite drink is apple juice."
             },
             {
               "question_pl": "Jaki jest ulubiony przedmiot twojego przyjaciela?",
               "question_en": "What is your friend's favourite school subject?",
               "answer_pl": "Jego ulubiony przedmiot to plastyka.",
-              "answer_en": "His favourite subject is art.",
-              "q_audio": "audio/2_ulubione_rzeczy_015_q.mp3",
-              "a_audio": "audio/2_ulubione_rzeczy_015_a.mp3"
+              "answer_en": "His favourite subject is art."
             },
             {
               "question_pl": "Jaki jest ulubiony kolor twojego przyjaciela?",
               "question_en": "What is your friend's favourite colour?",
               "answer_pl": "Jego ulubiony kolor to niebieski.",
-              "answer_en": "His favourite colour is blue.",
-              "q_audio": "audio/2_ulubione_rzeczy_016_q.mp3",
-              "a_audio": "audio/2_ulubione_rzeczy_016_a.mp3"
+              "answer_en": "His favourite colour is blue."
             }
           ]
         }
@@ -322,33 +258,25 @@
               "question_pl": "Czy twój przyjaciel ma rodzeństwo?",
               "question_en": "Does your friend have siblings?",
               "answer_pl": "Tak, on ma jedną siostrę.",
-              "answer_en": "Yes, he has one sister.",
-              "q_audio": "audio/3_rodzina_001_q.mp3",
-              "a_audio": "audio/3_rodzina_001_a.mp3"
+              "answer_en": "Yes, he has one sister."
             },
             {
               "question_pl": "Z kim mieszka twój przyjaciel?",
               "question_en": "Who does your friend live with?",
               "answer_pl": "On mieszka z mamą, tatą i siostrą.",
-              "answer_en": "He lives with his mum, dad and sister.",
-              "q_audio": "audio/3_rodzina_002_q.mp3",
-              "a_audio": "audio/3_rodzina_002_a.mp3"
+              "answer_en": "He lives with his mum, dad and sister."
             },
             {
               "question_pl": "Czy twój przyjaciel ma zwierzę?",
               "question_en": "Does your friend have a pet?",
               "answer_pl": "Tak, on ma małego psa.",
-              "answer_en": "Yes, he has a small dog.",
-              "q_audio": "audio/3_rodzina_003_q.mp3",
-              "a_audio": "audio/3_rodzina_003_a.mp3"
+              "answer_en": "Yes, he has a small dog."
             },
             {
               "question_pl": "Czy twój przyjaciel lubi swoją rodzinę?",
               "question_en": "Does your friend like his family?",
               "answer_pl": "Tak, on bardzo lubi swoją rodzinę.",
-              "answer_en": "Yes, he likes his family very much.",
-              "q_audio": "audio/3_rodzina_004_q.mp3",
-              "a_audio": "audio/3_rodzina_004_a.mp3"
+              "answer_en": "Yes, he likes his family very much."
             }
           ]
         },
@@ -359,33 +287,25 @@
               "question_pl": "Gdzie mieszka twój przyjaciel?",
               "question_en": "Where does your friend live?",
               "answer_pl": "On mieszka w Warszawie.",
-              "answer_en": "He lives in Warsaw.",
-              "q_audio": "audio/3_dom_i_miasto_005_q.mp3",
-              "a_audio": "audio/3_dom_i_miasto_005_a.mp3"
+              "answer_en": "He lives in Warsaw."
             },
             {
               "question_pl": "Czy twój przyjaciel mieszka w domu czy w mieszkaniu?",
               "question_en": "Does your friend live in a house or a flat?",
               "answer_pl": "On mieszka w mieszkaniu.",
-              "answer_en": "He lives in a flat.",
-              "q_audio": "audio/3_dom_i_miasto_006_q.mp3",
-              "a_audio": "audio/3_dom_i_miasto_006_a.mp3"
+              "answer_en": "He lives in a flat."
             },
             {
               "question_pl": "Jaki jest jego pokój?",
               "question_en": "What is his room like?",
               "answer_pl": "Jego pokój jest jasny i nowoczesny.",
-              "answer_en": "His room is bright and modern.",
-              "q_audio": "audio/3_dom_i_miasto_007_q.mp3",
-              "a_audio": "audio/3_dom_i_miasto_007_a.mp3"
+              "answer_en": "His room is bright and modern."
             },
             {
               "question_pl": "Czy w jego pokoju jest biurko?",
               "question_en": "Is there a desk in his room?",
               "answer_pl": "Tak, w jego pokoju jest duże biurko.",
-              "answer_en": "Yes, there is a big desk in his room.",
-              "q_audio": "audio/3_dom_i_miasto_008_q.mp3",
-              "a_audio": "audio/3_dom_i_miasto_008_a.mp3"
+              "answer_en": "Yes, there is a big desk in his room."
             }
           ]
         },
@@ -396,33 +316,25 @@
               "question_pl": "Do jakiej szkoły chodzi twój przyjaciel?",
               "question_en": "What school does your friend go to?",
               "answer_pl": "Mój przyjaciel chodzi do szkoły średniej.",
-              "answer_en": "My friend goes to secondary school.",
-              "q_audio": "audio/3_szkoa_009_q.mp3",
-              "a_audio": "audio/3_szkoa_009_a.mp3"
+              "answer_en": "My friend goes to secondary school."
             },
             {
               "question_pl": "Czy twój przyjaciel lubi szkołę?",
               "question_en": "Does your friend like school?",
               "answer_pl": "Tak, on lubi szkołę.",
-              "answer_en": "Yes, he likes school.",
-              "q_audio": "audio/3_szkoa_010_q.mp3",
-              "a_audio": "audio/3_szkoa_010_a.mp3"
+              "answer_en": "Yes, he likes school."
             },
             {
               "question_pl": "Jakiego przedmiotu nie lubi twój przyjaciel?",
               "question_en": "What subject does your friend not like?",
               "answer_pl": "On nie lubi historii.",
-              "answer_en": "He does not like history.",
-              "q_audio": "audio/3_szkoa_011_q.mp3",
-              "a_audio": "audio/3_szkoa_011_a.mp3"
+              "answer_en": "He does not like history."
             },
             {
               "question_pl": "Czy twój przyjaciel odrabia pracę domową?",
               "question_en": "Does your friend do homework?",
               "answer_pl": "Tak, on zawsze odrabia pracę domową.",
-              "answer_en": "Yes, he always does his homework.",
-              "q_audio": "audio/3_szkoa_012_q.mp3",
-              "a_audio": "audio/3_szkoa_012_a.mp3"
+              "answer_en": "Yes, he always does his homework."
             }
           ]
         },
@@ -433,33 +345,25 @@
               "question_pl": "O której godzinie twój przyjaciel wstaje?",
               "question_en": "What time does your friend get up?",
               "answer_pl": "On wstaje o siódmej godzinie.",
-              "answer_en": "He gets up at seven o'clock.",
-              "q_audio": "audio/3_codzienna_rutyna_013_q.mp3",
-              "a_audio": "audio/3_codzienna_rutyna_013_a.mp3"
+              "answer_en": "He gets up at seven o'clock."
             },
             {
               "question_pl": "Co je twój przyjaciel na śniadanie?",
               "question_en": "What does your friend eat for breakfast?",
               "answer_pl": "Na śniadanie on je płatki z mlekiem.",
-              "answer_en": "For breakfast he eats cereal with milk.",
-              "q_audio": "audio/3_codzienna_rutyna_014_q.mp3",
-              "a_audio": "audio/3_codzienna_rutyna_014_a.mp3"
+              "answer_en": "For breakfast he eats cereal with milk."
             },
             {
               "question_pl": "Jak twój przyjaciel idzie do szkoły?",
               "question_en": "How does your friend go to school?",
               "answer_pl": "On idzie do szkoły pieszo.",
-              "answer_en": "He goes to school on foot.",
-              "q_audio": "audio/3_codzienna_rutyna_015_q.mp3",
-              "a_audio": "audio/3_codzienna_rutyna_015_a.mp3"
+              "answer_en": "He goes to school on foot."
             },
             {
               "question_pl": "Co robi twój przyjaciel wieczorem?",
               "question_en": "What does your friend do in the evening?",
               "answer_pl": "Wieczorem on ogląda telewizję i czyta książkę.",
-              "answer_en": "In the evening he watches television and reads a book.",
-              "q_audio": "audio/3_codzienna_rutyna_016_q.mp3",
-              "a_audio": "audio/3_codzienna_rutyna_016_a.mp3"
+              "answer_en": "In the evening he watches television and reads a book."
             }
           ]
         }
