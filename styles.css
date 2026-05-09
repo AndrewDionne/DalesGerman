@@ -247,7 +247,12 @@ h1 {
   margin-top: 12px;
 }
 
+.audio-controls .speed-btn {
+  grid-column: 1 / -1;
+}
+
 .audio-btn,
+.speed-btn,
 .ghost-btn {
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -257,11 +262,13 @@ h1 {
   cursor: pointer;
 }
 
-.audio-btn {
+.audio-btn,
+.speed-btn {
   font-weight: 700;
 }
 
-.audio-btn span {
+.audio-btn span,
+.speed-btn span {
   display: block;
   font-size: 12px;
   color: var(--muted);
@@ -269,9 +276,14 @@ h1 {
   margin-top: 2px;
 }
 
-.audio-btn.playing {
+.audio-btn.playing,
+.speed-btn.active {
   border-color: var(--accent);
   background: var(--accent-soft);
+}
+
+.speed-btn {
+  color: var(--text);
 }
 
 .bottom-nav {
@@ -334,5 +346,13 @@ h1 {
 
   .two-up {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .audio-controls {
+    grid-template-columns: 1fr 1fr 0.75fr;
+  }
+
+  .audio-controls .speed-btn {
+    grid-column: auto;
   }
 }

@@ -5,6 +5,7 @@ const state = {
   activeModuleId: null,
   activeAudioButton: null,
   activeUtterance: null,
+  audioRate: 1.0,
 };
 
 const dom = {
@@ -53,6 +54,12 @@ function wireGlobalEvents() {
   dom.groupsContainer.addEventListener('click', (event) => {
     const summaryButton = event.target.closest('.qa-summary');
     const audioButton = event.target.closest('.audio-btn');
+    const speedButton = event.target.closest('.speed-btn');
+
+    if (speedButton) {
+      toggleAudioSpeed();
+      return;
+    }
 
     if (summaryButton) {
       const row = summaryButton.closest('.qa-row');
@@ -181,6 +188,10 @@ function renderQuestionRow(item, index) {
             A
             <span>Play Polish answer</span>
           </button>
+          <button type="button" class="speed-btn" aria-pressed="false">
+            Speed
+            <span>Normal · tap for 0.8x</span>
+          </button>
         </div>
 
         <div class="qa-payload" data-payload="${escapeAttribute(encodeURIComponent(JSON.stringify(item)))}"></div>
@@ -226,6 +237,7 @@ function playAudio(button) {
 
   if (audioSrc) {
     dom.sharedPlayer.src = audioSrc;
+    dom.sharedPlayer.playbackRate = state.audioRate;
     dom.sharedPlayer.play().catch((error) => {
       console.error(error);
       speakFallback(button, payload);
@@ -247,12 +259,30 @@ function speakFallback(button, payload) {
 
   const utterance = new SpeechSynthesisUtterance(utteranceText);
   utterance.lang = 'pl-PL';
-  utterance.rate = 0.95;
+  utterance.rate = state.audioRate;
   utterance.onend = clearPlayingState;
   utterance.onerror = clearPlayingState;
   state.activeUtterance = utterance;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
+}
+
+
+function toggleAudioSpeed() {
+  state.audioRate = state.audioRate === 1.0 ? 0.8 : 1.0;
+  dom.sharedPlayer.playbackRate = state.audioRate;
+  updateSpeedButtons();
+}
+
+function updateSpeedButtons() {
+  document.querySelectorAll('.speed-btn').forEach((button) => {
+    const isSlow = state.audioRate === 0.8;
+    button.classList.toggle('active', isSlow);
+    button.setAttribute('aria-pressed', isSlow ? 'true' : 'false');
+    button.innerHTML = isSlow
+      ? 'Speed<span>0.8x · tap for normal</span>'
+      : 'Speed<span>Normal · tap for 0.8x</span>';
+  });
 }
 
 function stopPlayback() {

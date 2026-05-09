@@ -1,6 +1,6 @@
 # Tools
 
-This folder contains local scripts for generating question and answer audio files for the static study app.
+This folder contains local scripts for generating question and answer audio files for the static study app. The default output uses the normal gTTS voice for the selected language.
 
 ## What it does
 
@@ -68,11 +68,13 @@ If your JSON uses custom field names:
 python tools/generate_audio.py --lang pl --question-key question_pl --answer-key answer_pl
 ```
 
-Use slower speech:
+Optional: generate slower source MP3s with gTTS slow mode:
 
 ```bash
 python tools/generate_audio.py --lang pl --slow --overwrite
 ```
+
+For this app, the recommended setup is to generate normal gTTS MP3s and use the in-app 0.8x playback button when slower listening is needed.
 
 ## Notes
 
