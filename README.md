@@ -1,22 +1,24 @@
-# German Q&A Practice App
+# Polish Invisible Friend Practice App
 
-A static, GitHub Pages-ready practice app for German question-and-answer drills.
+A static, GitHub Pages-ready practice app for short Polish description questions about an **invisible friend**.
 
 ## Features
 
 - iPhone-friendly layout
 - Sticky bottom navigation bar for modules
-- Modules contain groups of question rows
+- Modules contain groups of short question rows
 - Compact rows expand on tap
-- `Q` button plays the German question audio
-- `A` button plays the German answer audio
-- Toggle button flips the displayed text between German and English
+- `Q` button plays the Polish question audio
+- `A` button plays the Polish answer audio
+- If MP3 files have not been generated yet, the app falls back to browser speech for Polish
+- Toggle button flips the displayed text between Polish and English
 - Pure static frontend: HTML, CSS, JavaScript, JSON, MP3 files
+- `tools/` folder for generating MP3 files into `audio/`
 
 ## Repo structure
 
 ```text
-static_app/
+.
   index.html
   styles.css
   app.js
@@ -24,34 +26,50 @@ static_app/
     modules.json
   audio/
     *.mp3
+  tools/
+    generate_audio.py
+    run_generate_audio.sh
+    requirements.txt
 ```
 
 ## Content model
 
-Each item in `data/modules.json` needs:
+Each item in `data/modules.json` can use:
 
-- `question_de`
+- `question_pl`
 - `question_en`
-- `answer_de`
+- `answer_pl`
 - `answer_en`
-- `q_audio`
-- `a_audio`
+- optional `q_audio`
+- optional `a_audio`
+
+## Generate audio files
+
+From the repo root:
+
+```bash
+./tools/run_generate_audio.sh --lang pl --overwrite
+```
+
+That command will create MP3 files in `audio/` and update `data/modules.json`.
 
 ## Deploy to GitHub Pages
 
-1. Create a GitHub repo.
-2. Copy the contents of `static_app/` into the repo root.
-3. Commit and push.
-4. In GitHub, open **Settings → Pages**.
-5. Set the source to **Deploy from a branch**.
-6. Choose your branch and `/root`.
-7. Save.
+1. Commit and push the repo.
+2. In GitHub, open **Settings → Pages**.
+3. Set the source to **Deploy from a branch**.
+4. Choose your branch and `/root`.
+5. Save.
 
-## Add your own content
+## Study focus
 
-Use the generator app in the sibling `generator/` folder to create:
+This content is built around short teacher-style questions such as:
 
-- `data/modules.json`
-- German MP3 files in `audio/`
+- What is your friend's name?
+- What colour is his hair?
+- Is he tall?
+- What does he like doing?
+- Where does he live?
+- What does he wear?
 
-Then copy those generated files into this static repo and push again.
+The model answers are intentionally short and easy to memorise.

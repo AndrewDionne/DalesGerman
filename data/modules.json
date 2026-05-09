@@ -1,144 +1,465 @@
 {
   "modules": [
     {
-      "id": "3",
-      "title": "3",
-      "description": "Practice set for 3.",
+      "id": "1",
+      "title": "Moduł 1",
+      "description": "Podstawowe pytania o niewidzialnego przyjaciela: imię, wiek, wygląd i ubiór.",
       "groups": [
         {
-          "title": "Breakfast / yesterday / this weekend",
+          "title": "Imię i wiek",
           "items": [
             {
-              "question_de": "Was isst und trinkst du zum Frühstück? Ist das gesund? Was hast du gestern gegessen und getrunken? Was wirst du dieses Wochenende essen und trinken?",
-              "question_en": "What do you eat and drink for breakfast? Is that healthy? What did you eat and drink yesterday? What will you eat and drink this weekend?",
-              "answer_de": "Zum Frühstück esse ich normalerweise Müsli oder Toast und ich trinke Orangensaft. Ich finde das ziemlich gesund. Gestern habe ich Pizza gegessen und Wasser getrunken. Dieses Wochenende werde ich ein Sandwich essen und Milch trinken.",
-              "answer_en": "For breakfast I normally eat cereal or toast and I drink orange juice. I think that is quite healthy. Yesterday I ate pizza and drank water. This weekend I will eat a sandwich and drink milk.",
-              "q_audio": "audio/3_breakfast_yesterday_this_weekend_001_q.mp3",
-              "a_audio": "audio/3_breakfast_yesterday_this_weekend_001_a.mp3"
+              "question_pl": "Jak ma na imię twój przyjaciel?",
+              "question_en": "What is your friend's name?",
+              "answer_pl": "Mój przyjaciel ma na imię Kuba.",
+              "answer_en": "My friend's name is Kuba.",
+              "q_audio": "audio/1_imie_i_wiek_001_q.mp3",
+              "a_audio": "audio/1_imie_i_wiek_001_a.mp3"
+            },
+            {
+              "question_pl": "Ile lat ma twój przyjaciel?",
+              "question_en": "How old is your friend?",
+              "answer_pl": "Mój przyjaciel ma trzynaście lat.",
+              "answer_en": "My friend is thirteen years old.",
+              "q_audio": "audio/1_imie_i_wiek_002_q.mp3",
+              "a_audio": "audio/1_imie_i_wiek_002_a.mp3"
+            },
+            {
+              "question_pl": "Kiedy ma urodziny twój przyjaciel?",
+              "question_en": "When is your friend's birthday?",
+              "answer_pl": "Mój przyjaciel ma urodziny w maju.",
+              "answer_en": "My friend has a birthday in May.",
+              "q_audio": "audio/1_imie_i_wiek_003_q.mp3",
+              "a_audio": "audio/1_imie_i_wiek_003_a.mp3"
+            },
+            {
+              "question_pl": "Skąd jest twój przyjaciel?",
+              "question_en": "Where is your friend from?",
+              "answer_pl": "Mój przyjaciel jest z Polski.",
+              "answer_en": "My friend is from Poland.",
+              "q_audio": "audio/1_imie_i_wiek_004_q.mp3",
+              "a_audio": "audio/1_imie_i_wiek_004_a.mp3"
             }
           ]
         },
         {
-          "title": "Restaurant",
+          "title": "Włosy i oczy",
           "items": [
             {
-              "question_de": "Was nimmst du normalerweise in einem Restaurant? Was hast du das letzte Mal gegessen und getrunken, als du in einem Restaurant warst? Wie war das?",
-              "question_en": "What do you normally order in a restaurant? What did you eat and drink the last time you were in a restaurant? What was it like?",
-              "answer_de": "In einem Restaurant nehme ich normalerweise Hähnchenstreifen. Das letzte Mal habe ich Pasta gegessen und Limonade getrunken. Es war sehr lecker und das Restaurant war ziemlich schön.",
-              "answer_en": "In a restaurant I normally order chicken strips. Last time I ate pasta and drank lemonade. It was very tasty and the restaurant was quite nice.",
-              "q_audio": "audio/3_restaurant_001_q.mp3",
-              "a_audio": "audio/3_restaurant_001_a.mp3"
+              "question_pl": "Jaki kolor mają włosy twojego przyjaciela?",
+              "question_en": "What colour is your friend's hair?",
+              "answer_pl": "Jego włosy są brązowe.",
+              "answer_en": "His hair is brown.",
+              "q_audio": "audio/1_wosy_i_oczy_005_q.mp3",
+              "a_audio": "audio/1_wosy_i_oczy_005_a.mp3"
+            },
+            {
+              "question_pl": "Jakie oczy ma twój przyjaciel?",
+              "question_en": "What eyes does your friend have?",
+              "answer_pl": "On ma niebieskie oczy.",
+              "answer_en": "He has blue eyes.",
+              "q_audio": "audio/1_wosy_i_oczy_006_q.mp3",
+              "a_audio": "audio/1_wosy_i_oczy_006_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel ma długie włosy?",
+              "question_en": "Does your friend have long hair?",
+              "answer_pl": "Nie, on ma krótkie włosy.",
+              "answer_en": "No, he has short hair.",
+              "q_audio": "audio/1_wosy_i_oczy_007_q.mp3",
+              "a_audio": "audio/1_wosy_i_oczy_007_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel nosi okulary?",
+              "question_en": "Does your friend wear glasses?",
+              "answer_pl": "Tak, on nosi okulary.",
+              "answer_en": "Yes, he wears glasses.",
+              "q_audio": "audio/1_wosy_i_oczy_008_q.mp3",
+              "a_audio": "audio/1_wosy_i_oczy_008_a.mp3"
             }
           ]
         },
         {
-          "title": "Favourite food / cooking / sandwich",
+          "title": "Wzrost i wygląd",
           "items": [
             {
-              "question_de": "Was ist dein Lieblingsessen? Warum so? Kochst du gern? Wie macht man dein Lieblingssandwich?",
-              "question_en": "What is your favourite food? Why? Do you like cooking? How do you make your favourite sandwich?",
-              "answer_de": "Mein Lieblingsessen ist Pizza, weil sie lecker ist. Ich koche nicht oft, aber ich helfe manchmal zu Hause. Mein Lieblingssandwich macht man mit Pute, Salat und Mayonnaise. Dann legt man alles ins Brot und isst es.",
-              "answer_en": "My favourite food is pizza because it is tasty. I do not cook often, but I sometimes help at home. You make my favourite sandwich with turkey, lettuce, and mayonnaise. Then you put everything in the bread and eat it.",
-              "q_audio": "audio/3_favourite_food_cooking_sandwich_001_q.mp3",
-              "a_audio": "audio/3_favourite_food_cooking_sandwich_001_a.mp3"
+              "question_pl": "Czy twój przyjaciel jest wysoki?",
+              "question_en": "Is your friend tall?",
+              "answer_pl": "Tak, on jest dosyć wysoki.",
+              "answer_en": "Yes, he is quite tall.",
+              "q_audio": "audio/1_wzrost_i_wyglad_009_q.mp3",
+              "a_audio": "audio/1_wzrost_i_wyglad_009_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest niski?",
+              "question_en": "Is your friend short?",
+              "answer_pl": "Nie, on nie jest niski.",
+              "answer_en": "No, he is not short.",
+              "q_audio": "audio/1_wzrost_i_wyglad_010_q.mp3",
+              "a_audio": "audio/1_wzrost_i_wyglad_010_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest szczupły?",
+              "question_en": "Is your friend slim?",
+              "answer_pl": "Tak, on jest szczupły.",
+              "answer_en": "Yes, he is slim.",
+              "q_audio": "audio/1_wzrost_i_wyglad_011_q.mp3",
+              "a_audio": "audio/1_wzrost_i_wyglad_011_a.mp3"
+            },
+            {
+              "question_pl": "Jak wygląda twarz twojego przyjaciela?",
+              "question_en": "What does your friend's face look like?",
+              "answer_pl": "On ma okrągłą twarz i miły uśmiech.",
+              "answer_en": "He has a round face and a nice smile.",
+              "q_audio": "audio/1_wzrost_i_wyglad_012_q.mp3",
+              "a_audio": "audio/1_wzrost_i_wyglad_012_a.mp3"
             }
           ]
         },
         {
-          "title": "Fit and healthy",
+          "title": "Ubrania",
           "items": [
             {
-              "question_de": "Was muss man machen, um fit und gesund zu sein? (Essen / Schlafroutine / Training?)",
-              "question_en": "What must you do to be fit and healthy? (Food / sleep routine / exercise?)",
-              "answer_de": "Um fit und gesund zu sein, muss man gut essen, genug Wasser trinken und viel schlafen. Man muss auch aktiv sein und nicht zu viele Süßigkeiten essen.",
-              "answer_en": "To be fit and healthy, you must eat well, drink enough water, and sleep a lot. You must also be active and not eat too many sweets.",
-              "q_audio": "audio/3_fit_and_healthy_001_q.mp3",
-              "a_audio": "audio/3_fit_and_healthy_001_a.mp3"
-            }
-          ]
-        },
-        {
-          "title": "Are you active?",
-          "items": [
+              "question_pl": "Co twój przyjaciel zwykle nosi?",
+              "question_en": "What does your friend usually wear?",
+              "answer_pl": "On zwykle nosi dżinsy i bluzę.",
+              "answer_en": "He usually wears jeans and a hoodie.",
+              "q_audio": "audio/1_ubrania_013_q.mp3",
+              "a_audio": "audio/1_ubrania_013_a.mp3"
+            },
             {
-              "question_de": "Bist du aktiv? Was machst du? Was wirst du dieses Wochenende machen? Was hast du letzte Woche gemacht?",
-              "question_en": "Are you active? What do you do? What will you do this weekend? What did you do last week?",
-              "answer_de": "Ja, ich bin ziemlich aktiv. Ich spiele Hockey. Dieses Wochenende spiele ich bei einem Hockeyturnier. Letzte Woche war ich in einem Hockeycamp.",
-              "answer_en": "Yes, I am quite active. I play hockey. This weekend I am playing in a hockey tournament. Last week I was at a hockey camp.",
-              "q_audio": "audio/3_are_you_active_001_q.mp3",
-              "a_audio": "audio/3_are_you_active_001_a.mp3"
+              "question_pl": "Jaki jest ulubiony kolor ubrań twojego przyjaciela?",
+              "question_en": "What is your friend's favourite clothing colour?",
+              "answer_pl": "Jego ulubiony kolor to zielony.",
+              "answer_en": "His favourite colour is green.",
+              "q_audio": "audio/1_ubrania_014_q.mp3",
+              "a_audio": "audio/1_ubrania_014_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel nosi czapkę?",
+              "question_en": "Does your friend wear a hat?",
+              "answer_pl": "Tak, czasami nosi czarną czapkę.",
+              "answer_en": "Yes, sometimes he wears a black hat.",
+              "q_audio": "audio/1_ubrania_015_q.mp3",
+              "a_audio": "audio/1_ubrania_015_a.mp3"
+            },
+            {
+              "question_pl": "Jakie buty nosi twój przyjaciel?",
+              "question_en": "What shoes does your friend wear?",
+              "answer_pl": "On nosi sportowe buty.",
+              "answer_en": "He wears trainers.",
+              "q_audio": "audio/1_ubrania_016_q.mp3",
+              "a_audio": "audio/1_ubrania_016_a.mp3"
             }
           ]
         }
       ]
     },
     {
-      "id": "4",
-      "title": "4",
-      "description": "Practice set for 4.",
+      "id": "2",
+      "title": "Moduł 2",
+      "description": "Pytania o charakter, zainteresowania i to, co twój przyjaciel lubi robić.",
       "groups": [
         {
-          "title": "Youth hostel – must / must not",
+          "title": "Charakter",
           "items": [
             {
-              "question_de": "Was muss man in einer Jugendherberge (nicht) machen?",
-              "question_en": "What must you do (or not do) in a youth hostel?",
-              "answer_de": "In einer Jugendherberge muss man sein Zimmer sauber halten. Man muss auch pünktlich zum Essen sein. Man darf nicht im Flur rennen oder zu laut sein.",
-              "answer_en": "In a youth hostel you must keep your room clean. You must also be on time for meals. You cannot run in the hallways or be too loud.",
-              "q_audio": "audio/4_youth_hostel_must_must_not_001_q.mp3",
-              "a_audio": "audio/4_youth_hostel_must_must_not_001_a.mp3"
+              "question_pl": "Jaki charakter ma twój przyjaciel?",
+              "question_en": "What is your friend like?",
+              "answer_pl": "Mój przyjaciel jest bardzo miły.",
+              "answer_en": "My friend is very kind.",
+              "q_audio": "audio/2_charakter_001_q.mp3",
+              "a_audio": "audio/2_charakter_001_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest zabawny?",
+              "question_en": "Is your friend funny?",
+              "answer_pl": "Tak, on jest bardzo zabawny.",
+              "answer_en": "Yes, he is very funny.",
+              "q_audio": "audio/2_charakter_002_q.mp3",
+              "a_audio": "audio/2_charakter_002_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest nieśmiały?",
+              "question_en": "Is your friend shy?",
+              "answer_pl": "Nie, on jest raczej pewny siebie.",
+              "answer_en": "No, he is rather confident.",
+              "q_audio": "audio/2_charakter_003_q.mp3",
+              "a_audio": "audio/2_charakter_003_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest pracowity?",
+              "question_en": "Is your friend hard-working?",
+              "answer_pl": "Tak, on jest bardzo pracowity.",
+              "answer_en": "Yes, he is very hard-working.",
+              "q_audio": "audio/2_charakter_004_q.mp3",
+              "a_audio": "audio/2_charakter_004_a.mp3"
             }
           ]
         },
         {
-          "title": "Youth hostel – allowed / not allowed",
+          "title": "Zainteresowania",
           "items": [
             {
-              "question_de": "Was darf man in einer Jugendherberge (nicht) machen?",
-              "question_en": "What are you allowed (or not allowed) to do in a youth hostel?",
-              "answer_de": "In einer Jugendherberge darf man Spiele spielen und mit Freunden sprechen. Man darf auch im Gemeinschaftsraum sitzen. Aber man darf nicht laut sein oder spät in der Nacht Musik hören.",
-              "answer_en": "In a youth hostel you are allowed to play games and talk with friends. You are also allowed to sit in the common room. But you are not allowed to be loud or listen to music late at night.",
-              "q_audio": "audio/4_youth_hostel_allowed_not_allowed_001_q.mp3",
-              "a_audio": "audio/4_youth_hostel_allowed_not_allowed_001_a.mp3"
+              "question_pl": "Co lubi robić twój przyjaciel po szkole?",
+              "question_en": "What does your friend like doing after school?",
+              "answer_pl": "Po szkole on lubi grać w piłkę nożną.",
+              "answer_en": "After school he likes playing football.",
+              "q_audio": "audio/2_zainteresowania_005_q.mp3",
+              "a_audio": "audio/2_zainteresowania_005_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel lubi muzykę?",
+              "question_en": "Does your friend like music?",
+              "answer_pl": "Tak, on bardzo lubi muzykę.",
+              "answer_en": "Yes, he likes music very much.",
+              "q_audio": "audio/2_zainteresowania_006_q.mp3",
+              "a_audio": "audio/2_zainteresowania_006_a.mp3"
+            },
+            {
+              "question_pl": "Jakiej muzyki słucha twój przyjaciel?",
+              "question_en": "What music does your friend listen to?",
+              "answer_pl": "On słucha muzyki pop.",
+              "answer_en": "He listens to pop music.",
+              "q_audio": "audio/2_zainteresowania_007_q.mp3",
+              "a_audio": "audio/2_zainteresowania_007_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel lubi czytać?",
+              "question_en": "Does your friend like reading?",
+              "answer_pl": "Tak, on lubi czytać komiksy.",
+              "answer_en": "Yes, he likes reading comics.",
+              "q_audio": "audio/2_zainteresowania_008_q.mp3",
+              "a_audio": "audio/2_zainteresowania_008_a.mp3"
             }
           ]
         },
         {
-          "title": "Daily routine",
+          "title": "Sport i aktywność",
           "items": [
             {
-              "question_de": "Wie ist dein Alltag? Beschreibe deine Routine vor der Schule. Beschreibe deine Routine nach der Schule. Und am Wochenende?",
-              "question_en": "What is your daily routine like? Describe your routine before school. Describe your routine after school. And at the weekend?",
-              "answer_de": "Vor der Schule stehe ich um halb sieben auf, ich frühstücke und ich gehe zur Schule. Nach der Schule mache ich meine Hausaufgaben und ich gehe mit meinem Hund spazieren. Am Wochenende schlafe ich länger. Ich spiele oft Hockey oder ich gehe zum Kunstkurs.",
-              "answer_en": "Before school I get up at 6:30, I eat breakfast, and I go to school. After school I do my homework and walk my dog. On the weekend I sleep in. I often play hockey or go to art class.",
-              "q_audio": "audio/4_daily_routine_001_q.mp3",
-              "a_audio": "audio/4_daily_routine_001_a.mp3"
+              "question_pl": "Jaki sport uprawia twój przyjaciel?",
+              "question_en": "What sport does your friend do?",
+              "answer_pl": "Mój przyjaciel gra w koszykówkę.",
+              "answer_en": "My friend plays basketball.",
+              "q_audio": "audio/2_sport_i_aktywnosc_009_q.mp3",
+              "a_audio": "audio/2_sport_i_aktywnosc_009_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel jest aktywny?",
+              "question_en": "Is your friend active?",
+              "answer_pl": "Tak, on jest bardzo aktywny.",
+              "answer_en": "Yes, he is very active.",
+              "q_audio": "audio/2_sport_i_aktywnosc_010_q.mp3",
+              "a_audio": "audio/2_sport_i_aktywnosc_010_a.mp3"
+            },
+            {
+              "question_pl": "Co robi twój przyjaciel w weekend?",
+              "question_en": "What does your friend do at the weekend?",
+              "answer_pl": "W weekend on jeździ na rowerze.",
+              "answer_en": "At the weekend he rides his bike.",
+              "q_audio": "audio/2_sport_i_aktywnosc_011_q.mp3",
+              "a_audio": "audio/2_sport_i_aktywnosc_011_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel lubi pływać?",
+              "question_en": "Does your friend like swimming?",
+              "answer_pl": "Tak, latem on lubi pływać.",
+              "answer_en": "Yes, in summer he likes swimming.",
+              "q_audio": "audio/2_sport_i_aktywnosc_012_q.mp3",
+              "a_audio": "audio/2_sport_i_aktywnosc_012_a.mp3"
             }
           ]
         },
         {
-          "title": "Favourite festival",
+          "title": "Ulubione rzeczy",
           "items": [
             {
-              "question_de": "Was ist dein Lieblingsfest? Wo und wann ist das Fest? Wie ist das Fest? Wie kommt man zum Festival? Was gibt es dort zu sehen und zu tun?",
-              "question_en": "What is your favourite festival? Where and when is the festival? What is the festival like? How do you get to the festival? What is there to see and do there?",
-              "answer_de": "Mein Lieblingsfest ist ein Musikfestival im Sommer. Es ist in meiner Stadt und es ist sehr spannend. Man kann mit dem Bus oder mit dem Auto dorthin fahren. Dort gibt es Musik, Essen und viele Leute. Man kann tanzen, essen und Spaß haben.",
-              "answer_en": "My favourite festival is a music festival in the summer. It is in my town and it is very exciting. You can get there by bus or by car. There is music, food, and lots of people there. You can dance, eat, and have fun.",
-              "q_audio": "audio/4_favourite_festival_001_q.mp3",
-              "a_audio": "audio/4_favourite_festival_001_a.mp3"
+              "question_pl": "Jakie jest ulubione jedzenie twojego przyjaciela?",
+              "question_en": "What is your friend's favourite food?",
+              "answer_pl": "Jego ulubione jedzenie to pizza.",
+              "answer_en": "His favourite food is pizza.",
+              "q_audio": "audio/2_ulubione_rzeczy_013_q.mp3",
+              "a_audio": "audio/2_ulubione_rzeczy_013_a.mp3"
+            },
+            {
+              "question_pl": "Jaki jest ulubiony napój twojego przyjaciela?",
+              "question_en": "What is your friend's favourite drink?",
+              "answer_pl": "Jego ulubiony napój to sok jabłkowy.",
+              "answer_en": "His favourite drink is apple juice.",
+              "q_audio": "audio/2_ulubione_rzeczy_014_q.mp3",
+              "a_audio": "audio/2_ulubione_rzeczy_014_a.mp3"
+            },
+            {
+              "question_pl": "Jaki jest ulubiony przedmiot twojego przyjaciela?",
+              "question_en": "What is your friend's favourite school subject?",
+              "answer_pl": "Jego ulubiony przedmiot to plastyka.",
+              "answer_en": "His favourite subject is art.",
+              "q_audio": "audio/2_ulubione_rzeczy_015_q.mp3",
+              "a_audio": "audio/2_ulubione_rzeczy_015_a.mp3"
+            },
+            {
+              "question_pl": "Jaki jest ulubiony kolor twojego przyjaciela?",
+              "question_en": "What is your friend's favourite colour?",
+              "answer_pl": "Jego ulubiony kolor to niebieski.",
+              "answer_en": "His favourite colour is blue.",
+              "q_audio": "audio/2_ulubione_rzeczy_016_q.mp3",
+              "a_audio": "audio/2_ulubione_rzeczy_016_a.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Moduł 3",
+      "description": "Krótkie odpowiedzi o rodzinie, szkole, domu i codziennym życiu niewidzialnego przyjaciela.",
+      "groups": [
+        {
+          "title": "Rodzina",
+          "items": [
+            {
+              "question_pl": "Czy twój przyjaciel ma rodzeństwo?",
+              "question_en": "Does your friend have siblings?",
+              "answer_pl": "Tak, on ma jedną siostrę.",
+              "answer_en": "Yes, he has one sister.",
+              "q_audio": "audio/3_rodzina_001_q.mp3",
+              "a_audio": "audio/3_rodzina_001_a.mp3"
+            },
+            {
+              "question_pl": "Z kim mieszka twój przyjaciel?",
+              "question_en": "Who does your friend live with?",
+              "answer_pl": "On mieszka z mamą, tatą i siostrą.",
+              "answer_en": "He lives with his mum, dad and sister.",
+              "q_audio": "audio/3_rodzina_002_q.mp3",
+              "a_audio": "audio/3_rodzina_002_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel ma zwierzę?",
+              "question_en": "Does your friend have a pet?",
+              "answer_pl": "Tak, on ma małego psa.",
+              "answer_en": "Yes, he has a small dog.",
+              "q_audio": "audio/3_rodzina_003_q.mp3",
+              "a_audio": "audio/3_rodzina_003_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel lubi swoją rodzinę?",
+              "question_en": "Does your friend like his family?",
+              "answer_pl": "Tak, on bardzo lubi swoją rodzinę.",
+              "answer_en": "Yes, he likes his family very much.",
+              "q_audio": "audio/3_rodzina_004_q.mp3",
+              "a_audio": "audio/3_rodzina_004_a.mp3"
             }
           ]
         },
         {
-          "title": "Festival last weekend",
+          "title": "Dom i miasto",
           "items": [
             {
-              "question_de": "Du warst letztes Wochenende auf einem Fest. Beschreib es. Was hast du gesehen oder gemacht? Wie war das Wetter? Wirst du nächstes Jahr zum Fest gehen?",
-              "question_en": "You were at a festival last weekend. Describe it. What did you see or do? What was the weather like? Will you go to the festival next year?",
-              "answer_de": "Letztes Wochenende war ich mit meiner Familie auf einem Fest. Ich habe Musik gehört, ich habe gutes Essen gegessen und ich habe viele Leute gesehen. Das Wetter war sonnig und warm. Nächstes Jahr werde ich wieder hingehen, weil es super war.",
-              "answer_en": "Last weekend I was at a festival with my family. I listened to music, I ate good food, and I saw lots of people. The weather was sunny and warm. Next year I will go again because it was great.",
-              "q_audio": "audio/4_festival_last_weekend_001_q.mp3",
-              "a_audio": "audio/4_festival_last_weekend_001_a.mp3"
+              "question_pl": "Gdzie mieszka twój przyjaciel?",
+              "question_en": "Where does your friend live?",
+              "answer_pl": "On mieszka w Warszawie.",
+              "answer_en": "He lives in Warsaw.",
+              "q_audio": "audio/3_dom_i_miasto_005_q.mp3",
+              "a_audio": "audio/3_dom_i_miasto_005_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel mieszka w domu czy w mieszkaniu?",
+              "question_en": "Does your friend live in a house or a flat?",
+              "answer_pl": "On mieszka w mieszkaniu.",
+              "answer_en": "He lives in a flat.",
+              "q_audio": "audio/3_dom_i_miasto_006_q.mp3",
+              "a_audio": "audio/3_dom_i_miasto_006_a.mp3"
+            },
+            {
+              "question_pl": "Jaki jest jego pokój?",
+              "question_en": "What is his room like?",
+              "answer_pl": "Jego pokój jest jasny i nowoczesny.",
+              "answer_en": "His room is bright and modern.",
+              "q_audio": "audio/3_dom_i_miasto_007_q.mp3",
+              "a_audio": "audio/3_dom_i_miasto_007_a.mp3"
+            },
+            {
+              "question_pl": "Czy w jego pokoju jest biurko?",
+              "question_en": "Is there a desk in his room?",
+              "answer_pl": "Tak, w jego pokoju jest duże biurko.",
+              "answer_en": "Yes, there is a big desk in his room.",
+              "q_audio": "audio/3_dom_i_miasto_008_q.mp3",
+              "a_audio": "audio/3_dom_i_miasto_008_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Szkoła",
+          "items": [
+            {
+              "question_pl": "Do jakiej szkoły chodzi twój przyjaciel?",
+              "question_en": "What school does your friend go to?",
+              "answer_pl": "Mój przyjaciel chodzi do szkoły średniej.",
+              "answer_en": "My friend goes to secondary school.",
+              "q_audio": "audio/3_szkoa_009_q.mp3",
+              "a_audio": "audio/3_szkoa_009_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel lubi szkołę?",
+              "question_en": "Does your friend like school?",
+              "answer_pl": "Tak, on lubi szkołę.",
+              "answer_en": "Yes, he likes school.",
+              "q_audio": "audio/3_szkoa_010_q.mp3",
+              "a_audio": "audio/3_szkoa_010_a.mp3"
+            },
+            {
+              "question_pl": "Jakiego przedmiotu nie lubi twój przyjaciel?",
+              "question_en": "What subject does your friend not like?",
+              "answer_pl": "On nie lubi historii.",
+              "answer_en": "He does not like history.",
+              "q_audio": "audio/3_szkoa_011_q.mp3",
+              "a_audio": "audio/3_szkoa_011_a.mp3"
+            },
+            {
+              "question_pl": "Czy twój przyjaciel odrabia pracę domową?",
+              "question_en": "Does your friend do homework?",
+              "answer_pl": "Tak, on zawsze odrabia pracę domową.",
+              "answer_en": "Yes, he always does his homework.",
+              "q_audio": "audio/3_szkoa_012_q.mp3",
+              "a_audio": "audio/3_szkoa_012_a.mp3"
+            }
+          ]
+        },
+        {
+          "title": "Codzienna rutyna",
+          "items": [
+            {
+              "question_pl": "O której godzinie twój przyjaciel wstaje?",
+              "question_en": "What time does your friend get up?",
+              "answer_pl": "On wstaje o siódmej godzinie.",
+              "answer_en": "He gets up at seven o'clock.",
+              "q_audio": "audio/3_codzienna_rutyna_013_q.mp3",
+              "a_audio": "audio/3_codzienna_rutyna_013_a.mp3"
+            },
+            {
+              "question_pl": "Co je twój przyjaciel na śniadanie?",
+              "question_en": "What does your friend eat for breakfast?",
+              "answer_pl": "Na śniadanie on je płatki z mlekiem.",
+              "answer_en": "For breakfast he eats cereal with milk.",
+              "q_audio": "audio/3_codzienna_rutyna_014_q.mp3",
+              "a_audio": "audio/3_codzienna_rutyna_014_a.mp3"
+            },
+            {
+              "question_pl": "Jak twój przyjaciel idzie do szkoły?",
+              "question_en": "How does your friend go to school?",
+              "answer_pl": "On idzie do szkoły pieszo.",
+              "answer_en": "He goes to school on foot.",
+              "q_audio": "audio/3_codzienna_rutyna_015_q.mp3",
+              "a_audio": "audio/3_codzienna_rutyna_015_a.mp3"
+            },
+            {
+              "question_pl": "Co robi twój przyjaciel wieczorem?",
+              "question_en": "What does your friend do in the evening?",
+              "answer_pl": "Wieczorem on ogląda telewizję i czyta książkę.",
+              "answer_en": "In the evening he watches television and reads a book.",
+              "q_audio": "audio/3_codzienna_rutyna_016_q.mp3",
+              "a_audio": "audio/3_codzienna_rutyna_016_a.mp3"
             }
           ]
         }
